@@ -1,93 +1,81 @@
-'use strict'
-// код который помогает определить на каком устройстве открыта страница
-const isMobile = {
-   Android: function () {
-      return navigator.userAgent.match(/Android/i);
+// 'use strsct'
+// let position = 0;
+// const slidesToShow = 4;
+// const slidesToScrol = 1;
+// const box = document.querySelector('.box');
+// const slider = document.querySelector('.slider');
+// //const item = document.querySelector('.slider__item');
+// const btnPrev = document.querySelector('.btn__prev');
+// const btnNext = document.querySelector('.btn__next');
+// const items = document.querySelectorAll('.slider__item')
+// const itemCount = items.length;
+// const itemWidth = box.clientWidth / slidesToShow;
+// const movePosition = slidesToScrol * itemWidth;
+// items.forEach((item) => {
+//    item.style.minWidth = `${itemWidth}px`;
+// });
+// btnPrev.addEventListener('click', () => {
+//    const itemsLeft = Math.ads(position) / itemWidth;
+//    position += itemsLeft >= slidesToScrol ? movePosition : itemsLeft * itemWidth;
+//    setPosition()
+//    checkBtns()
+// });
+// btnNext.addEventListener('click', () => {
+//    const itemsLeft = itemsCount - (Math.ads(position) + slidesToShow * itemWidth) / itemWidth;
+//    position -= itemsLeft >= slidesToScrol ? movePosition : itemsLeft * itemWidth;
+//    setPosition()
+//    checkBtns()
+// });
+// const setPosition = () => {
+//    slider.style.transform =`traslateX(${position}px)`
 
-   },
-   BlackBerry: function () {
-      return navigator.userAgent.match(/BlackBerry/i);
-   },
-   ios: function () {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-   },
-   Opera: function () {
-      return navigator.userAgent.match(/Opera Mini/i);
-   },
-   Windows: function () {
-      return navigator.userAgent.match(/IEMobile/i);
-   },
-   any: function () {
-      return (
-         isMobile.Android() ||
-         isMobile.BlackBerry() ||
-         isMobile.ios() ||
-         isMobile.Opera() ||
-         isMobile.Windows())
-   }
-};
-//Проверка если открыто на устройству мобильном то жобавится класс на боди '_touch
-//если открыто на пк то _pc
+// }
+// const checkBtns = () => {
+//    btnPrev.disabled = position === 0
+//    btnNext.disabled =position <= -(itemCount - slidesToShow) * itemWidth
 
-if (isMobile.any()) {
-   document.body.classList.add('_touch');
-   let menuArrows = document.querySelectorAll('.menu__arrow');
-   if (menuArrows.length > 0) {
-      for (let index = 0; index < menuArrows.length; index++) {
-         const menuArrow = menuArrows[index];
-         menuArrow.addEventListener('click', function (e) {
-            menuArrow.parentElement.classList.toggle('_active')
-         }
+// }
+// checkBtns()
 
-         )
-      }
-   }
-} else {
-   document.body.classList.add('_pc');
+/* Индекс слайда по умолчанию */
+let slideIndex = 1;
+showSlides(slideIndex);
+
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function plusSlide() {
+   showSlides(slideIndex += 1);
 }
 
-// ПЛАВНАЯ ПРОКРУТКА К НУЖНОМУ РАЗДЕЛУ
-// В ИНДЕКСЕ К ССЫЛКАМ ДОБАВЛЯЕМ АТРИБУТ data-goto=".page__section-1 "
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]')
-// проверка есть ли такие классы
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+   showSlides(slideIndex -= 1);
+}
 
-if (menuLinks.length > 0) {
-   menuLinks.forEach(menuLink => {
-      menuLink.addEventListener('click', onMenuLinkClick);
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+   showSlides(slideIndex = n);
+}
 
-   });
-   function onMenuLinkClick(e) {
-      const menuLink = e.target;
-      if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-         const gotoBlock = document.querySelector(menuLink.dataset.goto);
-         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
-         if (iconMenu.classList.contains('_active')) {
-            document.bodu.classList.remov('_lock');
-            iconMenu.classList.remove('_active');
-            menuBodu.classList.remove('_active');
-
-
-
-         }
-         window.scrollTo({
-            top: gotoBlockValue,
-            behavior: "smooth"
-         });
-         e.preventDefault();
-      }
+/* Основная функция слайдера */
+function showSlides(n) {
+   let i;
+   let slides = document.getElementsByClassName("item");
+   let dots = document.getElementsByClassName("slider-dots_item");
+   if (n > slides.length) {
+      slideIndex = 1
    }
+   if (n < 1) {
+      slideIndex = slides.length
+   }
+   for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+   }
+   for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex - 1].style.display = "block";
+   dots[slideIndex - 1].className += " active";
 }
-//Меню бургер
-const iconMenu = document.querySelector('.menu__icon');
-const menuBodu = document.querySelector('.menu__bodu');
-if (iconMenu) {
 
-   iconMenu.addEventListener('click', function (e) {
 
-      iconMenu.classList.toggle('_active');
-      menuBodu.classList.toggle('_active');
-   })
 
-}
-
- 

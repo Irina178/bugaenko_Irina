@@ -1,142 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Burger</title>
+  <title>Бугаенко Ирина</title>
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
-  <div class="wraper">
-    <header class="header">
+  <header>
+    <section class="name ">
       <div class="container">
-        <a class="header__logo" href=""></a>
-        <div class="header__menu menu">
-          <!-- START div menu__icon span - это создание самой иконки менб бургер -->
-          <div class="menu__icon">
-            <span></span>
+        <div class="firstname">
+          <div class="photo">
+            <img class="photo__img" src="./img/photo_2021-10-23_10-19-27.jpg" alt="Irina Bugaenko">
           </div>
-          <!-- END div menu__icon span - это создание самой иконки менб бургер -->
-          <!--  Старт общая оболочка меню  -->
-          <nav class="menu__bodu">
-            <ul class="menu__list">
-              <!-- навигационное меню по разделам на странице  -->
-              <li><a data-goto=".page__section-1 " class="menu__link" href="#">ONE</a></li>
-              <li><a data-goto=".page__section-2 " class="menu__link" href="#">TWO</a></li>
-              <li><a data-goto=".page__section-3 " class="menu__link" href="#">THREE</a></li>
-              <!-- навигационное меню по разделам на странице  -->
 
-              <li><a class="menu__link" href="">СТРАНИЦА 1</a>
-                <span class="menu__arrow"></span>
-                <ul class="menu__sub-list">
-                  <li> <a class="menu__sub-link" href="">РАЗДЕЛ 1</a></li>
-                  <li> <a class="menu__sub-link" href="">РАЗДЕЛ 2</a></li>
-                  <li> <a class="menu__sub-link" href="">РАЗДЕЛ 3</a></li>
-                </ul>
-              </li>
-              <li><a class="menu__link" href="">СТРАНИЦА 2</a></li>
-            </ul>
-
-          </nav>
-          <!--  end Старт общая оболочка меню  -->
+          <h1 class="heading">Бугаенко Ирина</h1>
         </div>
       </div>
-    </header>
+    </section>
+  </header>
+  <main>
+    <!-- <section class="profession "> </section> -->
+    <section class="education  ">
+      <div class="container">
+        <div class="slider">
+          <h2 class="slider__item">ОСВІТА</h2>
+          <div class="item">
+
+            <div class="item__slidetext">
+              <h2 class="item__heading">ОДАБА</h2>
+              <p class="item__text">2008р.- 2013 р. «Геодезія, картографія та землеустрій/ Землеустрій та кадастр»</p>
+            </div>
+          </div>
+
+          <div class="item">
+
+            <div class="item__slidetext">
+              <h2 class="item__heading">ОДАБА</h2>
+              <p class="item__text">2012 р.- 2015 р. «Водопостачання та водовідведення»</p>
+            </div>
+          </div>
+
+          <div class="item">
+
+            <div class="item__slidetext">
+              <h2 class="item__heading">КНУБА</h2>
+              <p class="item__text">2014р. – 2017р. «Кадастр та моніторинг земель» (аспірантура) </p>
+            </div>
+          </div>
 
 
-
-    <main class="page">
-      <section class="page__section page__section-1">
-        <h1 class="page__title">Number One</h1>
-        <div class="page__text">
-
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-
+          <a class="prev" onclick="minusSlide()">&#10094;</a>
+          <a class="next" onclick="plusSlide()">&#10095;</a>
         </div>
-      </section>
-      <section class="page__section page__section-2">
-        <h2 class="page__sub-title">Number Twoo</h2>
-        <div class="page__text">
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-
+        <div class="slider-dots">
+          <span class="slider-dots__item" onclick="currentSlide(1)"></span>
+          <span class="slider-dots__item" onclick="currentSlide(2)"></span>
+          <span class="slider-dots__item" onclick="currentSlide(3)"></span>
         </div>
-      </section>
-      <section class="page__section page__section-3">
-        <h2 class="page__sub-title">Number Three</h2>
-        <div class="page__text">
+      </div>
+    </section>
+    <section class="proffession">
+      <div class="container">
+        <div class="firm">
+          <h2 class="firm__heading">Досвід роботи</h2>
+          <ul class="company">
+            <li class="company__list">
+              <a class="company__link" href="https://kyivblagoustrii.kmda.gov.ua/">
+                КП «КИЇВБЛАГОУСТРІЙ»
+              </a>
+              <p class="company__text"> 2019р. – 2020р. - головний фахівець управління підземних
+                пішохідних перехідних переходів</p>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tenetur ipsa suscipit sunt. Optio
-            quidem non possimus ratione minima? Accusamus, sed cum quidem reiciendis quam ducimus in magni accusantium
-            aspernatur.</p>
-          <p>loremVeryCarrotsEnhancedInTheMedicationTheMainIsBoundToReceiveItChoiceIndeed,WeCanNotFindAReasonToBeSmall?accuse,ButWhenRejectingTheLeadingIntoTheGreatProsecutorsRejectskc">
-      <div id="viewport">
-        <div class="slider" style="left: 0">
-            <div class="slide"><img src="./img/brands/01.jpg" alt=""></div>
-            <div class="slide"><img src="./img/brands/02.jpg" alt=""></div>
-            <div class="slide"><img src="./img/brands/03.jpg" alt=""></div>
-            <div class="slide"><img src="./img/brands/04.jpg" alt=""></div>
-            <div class="slide"><img src=" ./img/brands/05.jpg" alt=""></div>
+              <p class="company__text">2018р. – 2019р. – начальник відділу по роботі районними
+                державними адміністраціями</p>
+            </li>
+
+            <li class="company__list">
+              <a class="company__link" href="http://www.knuba.edu.ua/">
+                КНУБА
+              </a>
+              <p class="company__text"> 2016р.- 2017р. - асистент кафедри «Землеустрою та кадастру»</p>
+
+            </li>
+            <li class="company__list">
+              <a class="company__link" href="https://odaba.edu.ua/">
+                ОДАБА
+              </a>
+              <p class="company__text"> 2013р.- 2015р. - асистент кафедри «Землеустрою та кадастру»</p>
+
+            </li>
+          </ul>
         </div>
-    </div>
- 
-    <div class="weather"></div>
- 
-    <button class="prev" >Назад</button>
-    <button class="next">Forward</button>
-  </section>
-    </main>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <section class="footer">
+      <div class="container">
+        <div class="basement">
+          <div class="skills">
+            <h2 class="skills__heading">КЛЮЧОВІ НАВИЧКИ</h2>
+            <ul class="abilityy">
+              <li class="abilityy__list">комунікабельність</li>
+              <li class="abilityy__list">відповідальність</li>
+              <li class="abilityy__list">уважність</li>
+              <li class="abilityy__list">пунктуальність</li>
+              <li class="abilityy__list">ініціативність</li>
+              <li class="abilityy__list">вміння працювати в команді</li>
+            </ul>
+          </div>
+          <div class="information">
+            <h2 class="skills__heading">ПРО СЕБЕ</h2>
+            <p class="information__text">Дата народження: 29.06.1991</p>
+            <p class="information__text">м.Одеса</p>
+
+          </div>
+
+          <div class="contact">
+            <h2 class="contact__heading">КОНТАКТИ</h2>
+            <ul class="connection">
+              <li class="connection__list">
+                <svg class="social-link__icon" width="25" height="25">
+                  <use href="./img/sprite.svg#icon-phone "></use>
+                </svg>
+                <a class="connection__link" href="tel:+380669050138">
+                  066 905 01 38
+                </a>
+              </li>
+              <li class="connection__list">
+                <svg class="social-link__icon" width="25" height="25">
+                  <use href="./img/sprite.svg#icon-mail"></use>
+                </svg>
+                <a class="connection__link" href="mailto:178mir@gmail.com">
+                  178mir@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="footer-social__set">
+            <li>
+              <a href="#" class="social-link footer-social__link">
+                <svg class="social-link__icon" width="30" height="30">
+                  <use href="./img/sprite.svg#icon-facebook2"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link footer-social__link">
+                <svg class="social-link__icon" width="30" height="30">
+                  <use href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link footer-social__link">
+                <svg class="social-link__icon" width="30" height="30">
+                  <use href="./img/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </footer>
+
   <script src="./js/script.js"></script>
 </body>
 

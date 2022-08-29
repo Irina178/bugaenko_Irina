@@ -1,0 +1,152 @@
+@media screen and (min-width: 320px){
+.footer {
+background-color: rgb(235, 234, 232);
+padding: 30px 0px;
+}
+// .container {
+// }
+// .basement {
+// }
+.skills {
+
+		&__heading {
+         font-size: 30px;
+         line-height: 1;
+         font-weight: 600;
+         color: #000;
+         text-align: center;
+         padding-bottom: 30px;
+         text-decoration: underline;
+         text-transform: uppercase;
+		}
+      
+}
+.abilityy {
+padding-bottom: 20px;
+		&__list {
+         font-size: 16px;
+         line-height: 1;
+         font-weight: 400;
+         color: grey;
+		}
+}
+.information {
+   padding-bottom: 20px;
+		&__text {
+         font-size: 16px;
+         line-height: 1;
+         font-weight: 400;
+         color: grey;
+		}
+}
+.footer-social {
+
+display: flex;
+		&__set {
+         padding: 20px 0px;
+         display: flex;
+         justify-content: space-between;
+		}
+
+		// &__link {
+     
+		// }
+}
+// .social-link {
+
+// 		// &__icon {
+         
+// 		// }
+// }
+// }
+
+.contact {
+
+   &__heading {
+      
+font-size: 30px;
+line-height: 1;
+font-weight: 600;
+color: #000;
+text-align: center;
+padding-bottom: 30px;
+text-decoration: underline;
+text-transform: uppercase;
+   }
+}
+.connection {
+display: flex;
+justify-content: space-between;
+
+   &__list {
+      padding-bottom: 10px;
+      align-items: center;
+   }
+
+   &__link {
+
+      font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    color: gray;
+   }
+   &__link:hover{
+      color: blue;
+   }
+}
+// .social-link {
+
+//    // &__icon {
+//    // }
+// }
+
+
+
+@media screen and (min-width: 1200px){
+   .footer {
+    
+   }
+   // .container {
+   // }
+   .basement {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    
+   }
+   .skills {
+   
+         &__heading {
+         }
+   }
+   .abilityy {
+   
+         &__list {
+         }
+   }
+   .information {
+   
+         &__text {
+         }
+   }
+   .footer-social {
+  
+         &__set {
+            display: flex;
+            flex-direction: column;
+         }
+   
+         &__link {
+         }
+   }
+   .social-link {
+   
+         &__icon {
+         }
+   }
+   }
+   .connection{
+      display: flex;
+      flex-direction: column;
+   }
+}
