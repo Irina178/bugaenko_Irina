@@ -94,18 +94,24 @@ justify-content: space-between;
       color: blue;
    }
 }
-// .social-link {
+.social:hover{
+   background-color:red;
+}
+ .social-link {
 
-//    // &__icon {
-//    // }
-// }
+   &__icon {
+      fill: blue
+   }
+   &__icon:hover{
+      fill: green;
+   }
+}
+ 
 
 
 
 @media screen and (min-width: 1200px){
-   .footer {
-    
-   }
+   
    // .container {
    // }
    .basement {
@@ -114,36 +120,16 @@ justify-content: space-between;
       justify-content: space-between;
     
    }
-   .skills {
-   
-         &__heading {
-         }
-   }
-   .abilityy {
-   
-         &__list {
-         }
-   }
-   .information {
-   
-         &__text {
-         }
-   }
+ 
    .footer-social {
   
          &__set {
             display: flex;
             flex-direction: column;
          }
-   
-         &__link {
-         }
+    
    }
-   .social-link {
    
-         &__icon {
-         }
-   }
    }
    .connection{
       display: flex;

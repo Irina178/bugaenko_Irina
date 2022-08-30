@@ -16,8 +16,6 @@ body {
   padding: 0px 15px;
   width: 375px;
   margin: 0 auto;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
 }
 
 @media screen and (min-width: 320px) {
@@ -114,6 +112,15 @@ body {
   }
   .connection__link:hover {
     color: blue;
+  }
+  .social:hover {
+    background-color: red;
+  }
+  .social-link__icon {
+    fill: blue;
+  }
+  .social-link__icon:hover {
+    fill: green;
   }
 }
 @media screen and (min-width: 320px) and (min-width: 1200px) {
@@ -810,5 +817,107 @@ img {
     color: var(--text-lighter);
     font-size: 1.9rem;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (min-width: 320px) {
+  .languages {
+    padding: 30px 0px;
+    background-color: #00dafb;
+  }
+  .languages__heading {
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    padding: 30px 0px;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+  .programming {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .programming__list {
+    margin-bottom: 10px;
+  }
+  .programming__heading {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    color: #000;
+    padding: 10px;
+    border: 3px solid blue;
+    background-color: white;
+    border-radius: 7px;
+    text-align: center;
+  }
+  .programming__heading:hover {
+    background-color: rgb(48, 10, 238);
+    border: 3px solid white;
+  }
+}
+@media screen and (min-width: 320px) {
+  .possession {
+    padding: 30px 0px;
+    background-color: #aff5ce;
+  }
+  .program__heading {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    padding-bottom: 30px;
+    text-decoration: underline;
+  }
+  .icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: 7px;
+  }
+  .icon__list {
+    width: 150px;
+    height: 85px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+  }
+  .icon__text {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    color: #000;
+  }
+  .icon__img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .icon__list {
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  .icon__text {
+    font-size: 20px;
+    font-weight: 600;
   }
 }/*# sourceMappingURL=main.css.map */
